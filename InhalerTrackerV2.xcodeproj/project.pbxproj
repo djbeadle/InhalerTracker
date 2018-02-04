@@ -14,6 +14,7 @@
 		C0747EE12026B01A000C69E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0747EDF2026B01A000C69E3 /* LaunchScreen.storyboard */; };
 		C0747EE92026B035000C69E3 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0747EE82026B035000C69E3 /* HealthKitSetupAssistant.swift */; };
 		C0747EEC202781FA000C69E3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0747EEB202781FA000C69E3 /* HealthKit.framework */; };
+		C0BFBA8B2027C14800CD8E42 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = C0BFBA8A2027C14800CD8E42 /* ScreenShot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C0747EEB202781FA000C69E3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C0747EED202781FB000C69E3 /* InhalerTrackerV2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InhalerTrackerV2.entitlements; sourceTree = "<group>"; };
 		C0BFBA892027BC3700CD8E42 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C0BFBA8A2027C14800CD8E42 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				C0BFBA892027BC3700CD8E42 /* README.md */,
+				C0BFBA8A2027C14800CD8E42 /* ScreenShot.png */,
 				C0747ED52026B01A000C69E3 /* InhalerTrackerV2 */,
 				C0747ED42026B01A000C69E3 /* Products */,
 				C0747EEA202781FA000C69E3 /* Frameworks */,
@@ -149,6 +152,7 @@
 			files = (
 				C0747EE12026B01A000C69E3 /* LaunchScreen.storyboard in Resources */,
 				C0747EDE2026B01A000C69E3 /* Assets.xcassets in Resources */,
+				C0BFBA8B2027C14800CD8E42 /* ScreenShot.png in Resources */,
 				C0747EDC2026B01A000C69E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

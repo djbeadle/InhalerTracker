@@ -1,5 +1,7 @@
 #  Inhaler Tracker
 
+![Screenshot of the app](https://raw.githubusercontent.com/djbeadle/InhalerTracker/master/ScreenShot.png "Screenshot of the app in action")
+
 ### What does it do?
 It records when you use your inhaler and how many puffs of it you take.
 
@@ -26,4 +28,5 @@ This app does not do any of the following things with your data:
 - Write to a blockchain
 
 <sup>1</sup> Just kidding, but I'm sure someone else is.
- <sup>2</sup> Oh, that'd be a good #TODO item.
+
+<sup>2</sup> Oh, that'd be a good #TODO item.
