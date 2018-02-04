@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,61 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InhalerTrackerV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWJ-4u-IMl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Usage Tracker" id="vk7-Bf-b4M"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmT-Gm-r3c">
+                                <rect key="frame" x="121" y="194" width="133" height="120"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="100"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA0-Yo-OKX">
+                                <rect key="frame" x="144" y="403" width="87" height="30"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-df-AQd">
+                                <rect key="frame" x="140" y="344" width="94" height="29"/>
+                                <connections>
+                                    <action selector="puffCounter:" destination="BYZ-38-t0r" eventType="valueChanged" id="E63-Q8-4eT"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmT-Gm-r3c" secondAttribute="trailing" constant="121" id="87r-eJ-PyK"/>
+                            <constraint firstItem="lA0-Yo-OKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="DsT-eJ-V9K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6b2-df-AQd" secondAttribute="trailing" constant="141" id="JeS-Bm-0BP"/>
+                            <constraint firstItem="lA0-Yo-OKX" firstAttribute="top" secondItem="6b2-df-AQd" secondAttribute="bottom" constant="30" id="M8g-6v-YwN"/>
+                            <constraint firstItem="qWJ-4u-IMl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFL-ZV-P95"/>
+                            <constraint firstItem="nmT-Gm-r3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="UlH-oa-tFM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmT-Gm-r3c" secondAttribute="trailing" constant="121" id="Wg3-WW-DEf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lA0-Yo-OKX" secondAttribute="trailing" constant="144" id="XkJ-MB-rbq"/>
+                            <constraint firstItem="6b2-df-AQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Y0b-hm-tRf"/>
+                            <constraint firstItem="qWJ-4u-IMl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="duF-f2-wdW"/>
+                            <constraint firstItem="nmT-Gm-r3c" firstAttribute="top" secondItem="qWJ-4u-IMl" secondAttribute="bottom" constant="130" id="f66-aB-sWm"/>
+                            <constraint firstItem="6b2-df-AQd" firstAttribute="top" secondItem="nmT-Gm-r3c" secondAttribute="bottom" constant="30" id="l9B-mL-l5t"/>
+                            <constraint firstItem="qWJ-4u-IMl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ncG-bE-VDJ"/>
+                            <constraint firstItem="nmT-Gm-r3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="pkm-KW-lzH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="outputDisplay" destination="nmT-Gm-r3c" id="iNu-WY-cXK"/>
+                        <outlet property="puffCounter" destination="6b2-df-AQd" id="SwQ-qy-iiF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
