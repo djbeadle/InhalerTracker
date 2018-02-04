@@ -55,6 +55,13 @@
                                     <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tjk-Xv-s3b"/>
                                 </connections>
                             </datePicker>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-mM-9wy">
+                                <rect key="frame" x="168" y="571" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,7 +73,6 @@
                             <constraint firstItem="qWJ-4u-IMl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFL-ZV-P95"/>
                             <constraint firstItem="yVh-Ae-7AI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TNI-22-JQK"/>
                             <constraint firstItem="nmT-Gm-r3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="UlH-oa-tFM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmT-Gm-r3c" secondAttribute="trailing" constant="121" id="Wg3-WW-DEf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lA0-Yo-OKX" secondAttribute="trailing" constant="144" id="XkJ-MB-rbq"/>
                             <constraint firstItem="6b2-df-AQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Y0b-hm-tRf"/>
                             <constraint firstItem="qWJ-4u-IMl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="duF-f2-wdW"/>
@@ -74,11 +80,11 @@
                             <constraint firstItem="yVh-Ae-7AI" firstAttribute="top" secondItem="6b2-df-AQd" secondAttribute="bottom" constant="30" id="iJK-GG-ebT"/>
                             <constraint firstItem="6b2-df-AQd" firstAttribute="top" secondItem="nmT-Gm-r3c" secondAttribute="bottom" constant="30" id="l9B-mL-l5t"/>
                             <constraint firstItem="qWJ-4u-IMl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ncG-bE-VDJ"/>
-                            <constraint firstItem="nmT-Gm-r3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="pkm-KW-lzH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="feedbackDisplay" destination="GK5-mM-9wy" id="Y3t-Ep-Dqq"/>
                         <outlet property="inhaleTime" destination="yVh-Ae-7AI" id="N9R-qe-cwn"/>
                         <outlet property="outputDisplay" destination="nmT-Gm-r3c" id="iNu-WY-cXK"/>
                         <outlet property="puffCounter" destination="6b2-df-AQd" id="SwQ-qy-iiF"/>

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var puffCounter: UIStepper!
     @IBOutlet weak var inhaleTime: UIDatePicker!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var feedbackDisplay: UITextField!
     
     private let authorizeHealthKitSection = 2
     var puffCount = 1
@@ -89,11 +90,21 @@ class ViewController: UIViewController {
             if let error = error
             {
                 print ("Error saving inhaler usage: \(error.localizedDescription)")
+                // Can't update the UI from a completion handler
+                DispatchQueue.main.async {
+                    self.feedbackDisplay.text = "🚫"
+                }
+                
             } else
             {
                 print ("Successfully saved inhaler usage!")
+                // Can't update the UI from a completion handler
+                DispatchQueue.main.async {
+                    self.feedbackDisplay.text = "✅"
+                }
             }
         }
+        
     }
 }
 
