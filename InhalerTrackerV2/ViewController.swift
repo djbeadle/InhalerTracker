@@ -52,6 +52,9 @@ class ViewController: UIViewController {
     
     @IBAction func puffCounter(_ sender: UIStepper)
     {
+        // clear feedbackDisplay
+        feedbackDisplay.text = ""
+        
         // outputDisplay.text = Int(sender.value).description
         puffCount = Int(sender.value)
         outputDisplay.text = puffCount.description
@@ -60,6 +63,8 @@ class ViewController: UIViewController {
     
     @IBAction func datePickerChanged(_ sender: UIDatePicker)
     {
+        // clear feedbackDisplay
+        feedbackDisplay.text = ""
     }
     
     @IBAction func submitButtonPressed(_ sender: UIButton) {
