@@ -27,6 +27,7 @@
 		C0747EE82026B035000C69E3 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		C0747EEB202781FA000C69E3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C0747EED202781FB000C69E3 /* InhalerTrackerV2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InhalerTrackerV2.entitlements; sourceTree = "<group>"; };
+		C0BFBA892027BC3700CD8E42 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		C0747ECA2026B01A000C69E3 = {
 			isa = PBXGroup;
 			children = (
+				C0BFBA892027BC3700CD8E42 /* README.md */,
 				C0747ED52026B01A000C69E3 /* InhalerTrackerV2 */,
 				C0747ED42026B01A000C69E3 /* Products */,
 				C0747EEA202781FA000C69E3 /* Frameworks */,
