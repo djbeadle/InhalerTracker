@@ -24,36 +24,54 @@
                                     <navigationItem title="Usage Tracker" id="vk7-Bf-b4M"/>
                                 </items>
                             </navigationBar>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-df-AQd">
+                                <rect key="frame" x="140" y="294" width="94" height="29"/>
+                                <connections>
+                                    <action selector="puffCounter:" destination="BYZ-38-t0r" eventType="valueChanged" id="E63-Q8-4eT"/>
+                                </connections>
+                            </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmT-Gm-r3c">
-                                <rect key="frame" x="121" y="194" width="133" height="120"/>
+                                <rect key="frame" x="121" y="144" width="133" height="120"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="100"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA0-Yo-OKX">
-                                <rect key="frame" x="144" y="403" width="87" height="30"/>
+                                <rect key="frame" x="144" y="599" width="87" height="30"/>
                                 <state key="normal" title="Submit"/>
-                            </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-df-AQd">
-                                <rect key="frame" x="140" y="344" width="94" height="29"/>
                                 <connections>
-                                    <action selector="puffCounter:" destination="BYZ-38-t0r" eventType="valueChanged" id="E63-Q8-4eT"/>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Vc-pN-Xbl"/>
                                 </connections>
-                            </stepper>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yVh-Ae-7AI">
+                                <rect key="frame" x="0.0" y="353" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="539460367.06339002">
+                                    <!--2018-02-04 18:06:07 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                    <!--2015-01-01 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tjk-Xv-s3b"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yVh-Ae-7AI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="817-xk-QJs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmT-Gm-r3c" secondAttribute="trailing" constant="121" id="87r-eJ-PyK"/>
+                            <constraint firstItem="lA0-Yo-OKX" firstAttribute="top" secondItem="yVh-Ae-7AI" secondAttribute="bottom" constant="30" id="DFt-4E-oK6"/>
                             <constraint firstItem="lA0-Yo-OKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="DsT-eJ-V9K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6b2-df-AQd" secondAttribute="trailing" constant="141" id="JeS-Bm-0BP"/>
-                            <constraint firstItem="lA0-Yo-OKX" firstAttribute="top" secondItem="6b2-df-AQd" secondAttribute="bottom" constant="30" id="M8g-6v-YwN"/>
                             <constraint firstItem="qWJ-4u-IMl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFL-ZV-P95"/>
+                            <constraint firstItem="yVh-Ae-7AI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TNI-22-JQK"/>
                             <constraint firstItem="nmT-Gm-r3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="UlH-oa-tFM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmT-Gm-r3c" secondAttribute="trailing" constant="121" id="Wg3-WW-DEf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lA0-Yo-OKX" secondAttribute="trailing" constant="144" id="XkJ-MB-rbq"/>
                             <constraint firstItem="6b2-df-AQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Y0b-hm-tRf"/>
                             <constraint firstItem="qWJ-4u-IMl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="duF-f2-wdW"/>
-                            <constraint firstItem="nmT-Gm-r3c" firstAttribute="top" secondItem="qWJ-4u-IMl" secondAttribute="bottom" constant="130" id="f66-aB-sWm"/>
+                            <constraint firstItem="nmT-Gm-r3c" firstAttribute="top" secondItem="qWJ-4u-IMl" secondAttribute="bottom" constant="80" id="f66-aB-sWm"/>
+                            <constraint firstItem="yVh-Ae-7AI" firstAttribute="top" secondItem="6b2-df-AQd" secondAttribute="bottom" constant="30" id="iJK-GG-ebT"/>
                             <constraint firstItem="6b2-df-AQd" firstAttribute="top" secondItem="nmT-Gm-r3c" secondAttribute="bottom" constant="30" id="l9B-mL-l5t"/>
                             <constraint firstItem="qWJ-4u-IMl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ncG-bE-VDJ"/>
                             <constraint firstItem="nmT-Gm-r3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="pkm-KW-lzH"/>
@@ -61,8 +79,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="inhaleTime" destination="yVh-Ae-7AI" id="N9R-qe-cwn"/>
                         <outlet property="outputDisplay" destination="nmT-Gm-r3c" id="iNu-WY-cXK"/>
                         <outlet property="puffCounter" destination="6b2-df-AQd" id="SwQ-qy-iiF"/>
+                        <outlet property="submitButton" destination="lA0-Yo-OKX" id="oZV-yv-tbZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

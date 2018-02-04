@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import HealthKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var outputDisplay: UITextField!
     @IBOutlet weak var puffCounter: UIStepper!
-    
+    @IBOutlet weak var inhaleTime: UIDatePicker!
+    @IBOutlet weak var submitButton: UIButton!
     
     private let authorizeHealthKitSection = 2
+    var puffCount = 1
+    var strDate = ""
     
-    private func authorizeHealthKit() {
+    private func authorizeHealthKit()
+    {
         HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
             guard authorized else {
                 let baseMessage = "HealthKit Authorization Failed"
@@ -31,22 +36,64 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         authorizeHealthKit()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func puffCounter(_ sender: UIStepper) {
-        outputDisplay.text = Int(sender.value).description
+    @IBAction func puffCounter(_ sender: UIStepper)
+    {
+        // outputDisplay.text = Int(sender.value).description
+        puffCount = Int(sender.value)
+        outputDisplay.text = puffCount.description
+        print("Puff Count: \(puffCount)")
     }
     
-
-
+    @IBAction func datePickerChanged(_ sender: UIDatePicker)
+    {
+    }
+    
+    @IBAction func submitButtonPressed(_ sender: UIButton) {
+        // Parse date & time from the picker
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        
+        strDate = dateFormatter.string(from: inhaleTime.date)
+        
+        // Define the data type we're using, make sure they're available on this device
+        guard let inhalerUsage = HKObjectType.quantityType(forIdentifier: .inhalerUsage) else
+        {
+            print("InhalerUsage type not available on this device.")
+            return
+        }
+        
+        // Transform the puffCount variable in to a HealthKit quanitity
+        let dataPoint = HKQuantity(unit: HKUnit(from: "count"), doubleValue: Double(puffCount))
+        
+        // Log to HealthKit
+        print("Logging the following data to HealthKit: \(puffCount) puffs at \(strDate)")
+        let quantitySample = HKQuantitySample(type: inhalerUsage, quantity: dataPoint, start: inhaleTime.date, end: inhaleTime.date)
+        
+        let healthStore = HKHealthStore()
+        healthStore.save(quantitySample) { (success, error) in
+            if let error = error
+            {
+                print ("Error saving inhaler usage: \(error.localizedDescription)")
+            } else
+            {
+                print ("Successfully saved inhaler usage!")
+            }
+        }
+    }
 }
 
