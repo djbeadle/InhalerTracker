@@ -53,10 +53,9 @@ class HealthKitSetupAssistant {
         
         // Define what we're doing with the data types we just defined
         let typesToWrite: Set<HKSampleType> = [inhalerUsage]
-        let typesToRead: Set<HKObjectType> = [inhalerUsage]
         
         // Request Authorization
-        HKHealthStore().requestAuthorization(toShare: typesToWrite, read: typesToRead) { (success, error) in completion(success, error)
+        HKHealthStore().requestAuthorization(toShare: typesToWrite, read: nil) { (success, error) in completion(success, error)
             
         }
     }

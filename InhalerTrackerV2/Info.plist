@@ -41,8 +41,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSHealthShareUsageDescription</key>
-	<string>Needed to read past inhaler usage records.</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Needed to add inhaler usage records.</string>
 </dict>
