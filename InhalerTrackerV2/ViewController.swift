@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var inhaleTime: UIDatePicker!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var feedbackDisplay: UITextField!
+    @IBOutlet weak var infoButton: UIBarButtonItem!
+    @IBAction func doneButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true) {
+            print("Dismissed Info page")
+        }
+    }
+    
     
     private let authorizeHealthKitSection = 2
     var puffCount = 1
