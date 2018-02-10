@@ -5,6 +5,9 @@
 ### What does it do?
 It records when you use your inhaler and how many puffs of it you take.
 
+### Where is the privacy policy?
+[Click here to see the privacy policy](http://danielbeadle.net/inhalerprivacy.html)
+
 ### How does it do that?
 You have to enter in when and how many puffs you take, but we're working on a bluetooth equipped inhaler that will do that for you<sup>1</sup>
 
@@ -26,6 +29,12 @@ This app does not do any of the following things with your data:
 - Judge it
 - Perform machine learning<sup>2</sup> on it
 - Write to a blockchain
+
+### TODO:
+- Add a dark mode
+- Add a today widget
+- Graduate undergrad
+- Get a job
 
 <sup>1</sup> Just kidding, but I'm sure someone else is.
 
