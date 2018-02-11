@@ -131,7 +131,7 @@
                                 <rect key="frame" x="0.0" y="536" width="375" height="74"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">The source code for this app can be found at
-github.com/djbeadle/InhalerTracker.html</string>
+https://github.com/djbeadle/InhalerTracker</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -139,8 +139,9 @@ github.com/djbeadle/InhalerTracker.html</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-Lf-91O">
                                 <rect key="frame" x="0.0" y="299" width="375" height="172"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">The only thing this application does is log your inhaler usage to Apple's HealthKit framework. This app does not transmit your data off of the device, save it anywhere else, run machine learning on it, or store it on a blockchain. The full application privacy policy can be found at
-DanielBeadle.net/inhalerprivacy.html</string>
+                                <string key="text">The only thing this application does is log your inhaler usage to Apple's HealthKit framework. 
+ This app does not transmit or store your data. The full privacy policy can be found at:
+http://DanielBeadle.net/inhalertracker.html</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
