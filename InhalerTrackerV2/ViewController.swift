@@ -55,13 +55,15 @@ class ViewController: UIViewController {
         {
             mainView.backgroundColor = .black
             outputDisplay.textColor = .white
-            //inhaleTime.setValue("white", forKeyPath: "textColor")
+            inhaleTime.setValue(UIColor.white, forKeyPath: "textColor")
+            inhaleTime.setValue(false, forKeyPath: "highlightsToday")
         }
         else
         {
             mainView.backgroundColor = .white
             outputDisplay.textColor = .black
-            // inhaleTime.setValue(, forKeyPath: "textColor")
+            inhaleTime.setValue(UIColor.black, forKeyPath: "textColor")
+            inhaleTime.setValue(false, forKeyPath: "highlightsToday")
         }
     }
     
@@ -74,13 +76,15 @@ class ViewController: UIViewController {
         {
             mainView.backgroundColor = .black
             outputDisplay.textColor = .white
-            // inhaleTime.setValue("white", forKeyPath: "textColor")
+            inhaleTime.setValue(UIColor.white, forKeyPath: "textColor")
+            inhaleTime.setValue(false, forKeyPath: "highlightsToday")
         }
         else
         {
             mainView.backgroundColor = .white
             outputDisplay.textColor = .black
-            // inhaleTime.setValue(, forKeyPath: "textColor")
+            inhaleTime.setValue(UIColor.black, forKeyPath: "textColor")
+            inhaleTime.setValue(false, forKeyPath: "highlightsToday")
         }
     }
 
