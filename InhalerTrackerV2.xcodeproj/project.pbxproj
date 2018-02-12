@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C054714A20315345006C32AE /* infoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054714920315345006C32AE /* infoVC.swift */; };
 		C0747ED72026B01A000C69E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0747ED62026B01A000C69E3 /* AppDelegate.swift */; };
 		C0747ED92026B01A000C69E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0747ED82026B01A000C69E3 /* ViewController.swift */; };
 		C0747EDC2026B01A000C69E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0747EDA2026B01A000C69E3 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C054714920315345006C32AE /* infoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoVC.swift; sourceTree = "<group>"; };
 		C0747ED32026B01A000C69E3 /* InhalerTrackerV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InhalerTrackerV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0747ED62026B01A000C69E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0747ED82026B01A000C69E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		C0747ED52026B01A000C69E3 /* InhalerTrackerV2 */ = {
 			isa = PBXGroup;
 			children = (
+				C054714920315345006C32AE /* infoVC.swift */,
 				C0747EED202781FB000C69E3 /* InhalerTrackerV2.entitlements */,
 				C0747EE82026B035000C69E3 /* HealthKitSetupAssistant.swift */,
 				C0747ED62026B01A000C69E3 /* AppDelegate.swift */,
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C054714A20315345006C32AE /* infoVC.swift in Sources */,
 				C0747ED92026B01A000C69E3 /* ViewController.swift in Sources */,
 				C0747ED72026B01A000C69E3 /* AppDelegate.swift in Sources */,
 				C0747EE92026B035000C69E3 /* HealthKitSetupAssistant.swift in Sources */,

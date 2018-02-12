@@ -10,19 +10,13 @@ import UIKit
 import HealthKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var outputDisplay: UITextField!
     @IBOutlet weak var puffCounter: UIStepper!
     @IBOutlet weak var inhaleTime: UIDatePicker!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var feedbackDisplay: UITextField!
-    @IBOutlet weak var infoButton: UIBarButtonItem!
-    @IBAction func doneButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true) {
-            print("Dismissed Info page")
-        }
-    }
     
+    @IBOutlet var mainView: UIView!
     
     private let authorizeHealthKitSection = 2
     var puffCount = 1
@@ -49,6 +43,45 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         authorizeHealthKit()
+        
+        // Was dark mode turned on in the infoVIew?
+        NotificationCenter.default.addObserver(self, selector: #selector(toggleDarkMode), name: NSNotification.Name("DarkModeChanged"), object: nil)
+
+        
+        // Dark mode!
+        let defaults = UserDefaults.standard
+        let darkModeEnabled = defaults.bool(forKey: "darkMode")
+        if darkModeEnabled
+        {
+            mainView.backgroundColor = .black
+            outputDisplay.textColor = .white
+            //inhaleTime.setValue("white", forKeyPath: "textColor")
+        }
+        else
+        {
+            mainView.backgroundColor = .white
+            outputDisplay.textColor = .black
+            // inhaleTime.setValue(, forKeyPath: "textColor")
+        }
+    }
+    
+    @objc func toggleDarkMode()
+    {
+        // Dark mode!
+        let defaults = UserDefaults.standard
+        let darkModeEnabled = defaults.bool(forKey: "darkMode")
+        if darkModeEnabled
+        {
+            mainView.backgroundColor = .black
+            outputDisplay.textColor = .white
+            // inhaleTime.setValue("white", forKeyPath: "textColor")
+        }
+        else
+        {
+            mainView.backgroundColor = .white
+            outputDisplay.textColor = .black
+            // inhaleTime.setValue(, forKeyPath: "textColor")
+        }
     }
 
     override func didReceiveMemoryWarning()

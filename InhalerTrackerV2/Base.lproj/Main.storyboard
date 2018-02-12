@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InhalerTrackerV2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -24,8 +24,11 @@
                                     <action selector="puffCounter:" destination="BYZ-38-t0r" eventType="valueChanged" id="E63-Q8-4eT"/>
                                 </connections>
                             </stepper>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmT-Gm-r3c">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmT-Gm-r3c">
                                 <rect key="frame" x="137.5" y="149" width="100" height="120"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ex6-AP-ruW"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="zVG-ac-QTd"/>
@@ -97,6 +100,7 @@
                     <connections>
                         <outlet property="feedbackDisplay" destination="GK5-mM-9wy" id="Y3t-Ep-Dqq"/>
                         <outlet property="inhaleTime" destination="yVh-Ae-7AI" id="N9R-qe-cwn"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="KRR-w7-e5R"/>
                         <outlet property="outputDisplay" destination="nmT-Gm-r3c" id="iNu-WY-cXK"/>
                         <outlet property="puffCounter" destination="6b2-df-AQd" id="SwQ-qy-iiF"/>
                         <outlet property="submitButton" destination="lA0-Yo-OKX" id="oZV-yv-tbZ"/>
@@ -104,13 +108,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+            <point key="canvasLocation" x="446" y="115"/>
         </scene>
         <!--Info-->
         <scene sceneID="Ito-Cm-FqP">
             <objects>
-                <viewController id="Uhx-wq-JVk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rXL-ge-OAP">
+                <viewController id="Uhx-wq-JVk" customClass="infoVC" customModule="InhalerTrackerV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rXL-ge-OAP" userLabel="InfoView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -120,9 +124,11 @@
                                     <navigationItem title="Info" id="BgG-Tg-8V6"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Inhaler icon made by Freepik from www.flaticon.com " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnf-6c-jPo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Inhaler icon made by Freepik from www.flaticon.com " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jnf-6c-jPo">
                                 <rect key="frame" x="0.0" y="164" width="375" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="764-oC-ldI"/>
                                 </constraints>
@@ -130,9 +136,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuy-JU-kEd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vuy-JU-kEd">
                                 <rect key="frame" x="0.0" y="404" width="375" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="U8X-GN-RWo"/>
                                 </constraints>
@@ -142,9 +150,11 @@ https://github.com/djbeadle/InhalerTracker</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-Lf-91O">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-Lf-91O">
                                 <rect key="frame" x="0.0" y="244" width="375" height="140"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="bCw-50-S5S"/>
                                 </constraints>
@@ -155,9 +165,11 @@ http://DanielBeadle.net/inhalertracker.html</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-wn-9on">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-wn-9on">
                                 <rect key="frame" x="0.0" y="84" width="375" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="H9E-yJ-ta1"/>
                                 </constraints>
@@ -167,19 +179,38 @@ DanielBeadle.net</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F6B-Ay-igd">
+                                <rect key="frame" x="310" y="616" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeUIMode:" destination="Uhx-wq-JVk" eventType="valueChanged" id="ILu-tZ-HE5"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="Dark Mode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tOK-75-tQJ">
+                                <rect key="frame" x="227" y="624" width="75" height="17"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VyN-Fl-yr8" firstAttribute="leading" secondItem="rXL-ge-OAP" secondAttribute="leading" id="3ev-4m-vi2"/>
+                            <constraint firstItem="F6B-Ay-igd" firstAttribute="leading" secondItem="tOK-75-tQJ" secondAttribute="trailing" constant="8" id="7XN-Dd-bDh"/>
                             <constraint firstItem="qQa-Lf-91O" firstAttribute="top" secondItem="jnf-6c-jPo" secondAttribute="bottom" constant="20" id="BeE-K1-poh"/>
                             <constraint firstItem="VyN-Fl-yr8" firstAttribute="bottom" secondItem="z3h-SZ-LZc" secondAttribute="top" id="IHr-fL-epW"/>
+                            <constraint firstItem="z3h-SZ-LZc" firstAttribute="bottom" secondItem="tOK-75-tQJ" secondAttribute="bottom" constant="26" id="Kh4-yj-GqM"/>
                             <constraint firstItem="Vuy-JU-kEd" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="M8B-hL-ZHA"/>
                             <constraint firstItem="jnf-6c-jPo" firstAttribute="top" secondItem="XYH-wn-9on" secondAttribute="bottom" constant="20" id="P1t-WS-tws"/>
+                            <constraint firstItem="z3h-SZ-LZc" firstAttribute="bottom" secondItem="F6B-Ay-igd" secondAttribute="bottom" constant="20" id="Rwo-EM-6zM"/>
                             <constraint firstItem="qQa-Lf-91O" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="Yrd-Je-4gj"/>
                             <constraint firstItem="jnf-6c-jPo" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="Ytu-aK-IUL"/>
                             <constraint firstItem="Vuy-JU-kEd" firstAttribute="top" secondItem="qQa-Lf-91O" secondAttribute="bottom" constant="20" id="aBr-IW-WJM"/>
                             <constraint firstItem="qQa-Lf-91O" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="dnM-ZM-Xpi"/>
                             <constraint firstItem="XYH-wn-9on" firstAttribute="top" secondItem="VyN-Fl-yr8" secondAttribute="bottom" constant="20" id="nzE-os-jXx"/>
+                            <constraint firstItem="z3h-SZ-LZc" firstAttribute="trailing" secondItem="F6B-Ay-igd" secondAttribute="trailing" constant="16" id="rib-eV-Z39"/>
                             <constraint firstItem="XYH-wn-9on" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="tkl-Km-V4e"/>
                             <constraint firstItem="XYH-wn-9on" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="vCa-41-bP5"/>
                             <constraint firstAttribute="trailing" secondItem="VyN-Fl-yr8" secondAttribute="trailing" id="vSt-G2-Vz6"/>
@@ -191,10 +222,19 @@ DanielBeadle.net</string>
                     <navigationItem key="navigationItem" title="Info" id="Eug-QO-LNk">
                         <barButtonItem key="backBarButtonItem" title="Tracker" id="E62-Ft-d5u"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bylineText" destination="XYH-wn-9on" id="CZw-RJ-ZTx"/>
+                        <outlet property="darkMode" destination="F6B-Ay-igd" id="HUL-Go-hxN"/>
+                        <outlet property="darkModeText" destination="tOK-75-tQJ" id="WhA-iU-h4y"/>
+                        <outlet property="iconCreditText" destination="jnf-6c-jPo" id="Omg-jN-mxf"/>
+                        <outlet property="infoView" destination="rXL-ge-OAP" id="2Hz-aB-XuM"/>
+                        <outlet property="privacyText" destination="qQa-Lf-91O" id="iMq-Xi-Ukl"/>
+                        <outlet property="sourceText" destination="Vuy-JU-kEd" id="APM-Z1-BbK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihh-WN-Ey5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224.5" y="115.5"/>
+            <point key="canvasLocation" x="1192.8" y="114.69265367316342"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hDU-5w-dUR">
@@ -212,7 +252,7 @@ DanielBeadle.net</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gym-3O-gqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116.8" y="117.84107946026987"/>
+            <point key="canvasLocation" x="-342" y="115"/>
         </scene>
     </scenes>
 </document>
