@@ -31,7 +31,7 @@ This app does not do any of the following things with your data:
 - Write to a blockchain
 
 ### TODO:
-- Add a dark mode
+- Add a dark mode ✅
 - Add a today widget
 - Graduate undergrad
 - Get a job
