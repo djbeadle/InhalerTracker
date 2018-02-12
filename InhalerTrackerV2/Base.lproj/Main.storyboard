@@ -114,31 +114,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-Fl-yr8">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-Fl-yr8">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Info" id="BgG-Tg-8V6"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" text="Inhaler icon made by Freepik from www.flaticon.com " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jnf-6c-jPo">
-                                <rect key="frame" x="0.0" y="188" width="375" height="57"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Inhaler icon made by Freepik from www.flaticon.com " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnf-6c-jPo">
+                                <rect key="frame" x="0.0" y="164" width="375" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="764-oC-ldI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vuy-JU-kEd">
-                                <rect key="frame" x="0.0" y="536" width="375" height="74"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuy-JU-kEd">
+                                <rect key="frame" x="0.0" y="404" width="375" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="U8X-GN-RWo"/>
+                                </constraints>
                                 <string key="text">The source code for this app can be found at
 https://github.com/djbeadle/InhalerTracker</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-Lf-91O">
-                                <rect key="frame" x="0.0" y="299" width="375" height="172"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-Lf-91O">
+                                <rect key="frame" x="0.0" y="244" width="375" height="140"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="bCw-50-S5S"/>
+                                </constraints>
                                 <string key="text">The only thing this application does is log your inhaler usage to Apple's HealthKit framework. 
  This app does not transmit or store your data. The full privacy policy can be found at:
 http://DanielBeadle.net/inhalertracker.html</string>
@@ -146,27 +155,36 @@ http://DanielBeadle.net/inhalertracker.html</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-wn-9on">
-                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-wn-9on">
+                                <rect key="frame" x="0.0" y="84" width="375" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="H9E-yJ-ta1"/>
+                                </constraints>
                                 <string key="text">App developed by Daniel Beadle
 DanielBeadle.net</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qQa-Lf-91O" firstAttribute="top" secondItem="jnf-6c-jPo" secondAttribute="bottom" constant="30" id="FR6-JI-hHo"/>
-                            <constraint firstItem="Vuy-JU-kEd" firstAttribute="top" secondItem="qQa-Lf-91O" secondAttribute="bottom" constant="30" id="J70-p0-n6K"/>
-                            <constraint firstItem="XYH-wn-9on" firstAttribute="top" secondItem="VyN-Fl-yr8" secondAttribute="bottom" constant="20" id="M0P-Jf-tH6"/>
-                            <constraint firstItem="jnf-6c-jPo" firstAttribute="top" secondItem="XYH-wn-9on" secondAttribute="bottom" constant="30" id="Rqd-zO-W8O"/>
-                            <constraint firstItem="jnf-6c-jPo" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="fIh-MF-L3m"/>
-                            <constraint firstItem="qQa-Lf-91O" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="iht-Vt-wcc"/>
-                            <constraint firstItem="Vuy-JU-kEd" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="jGM-wt-8d1"/>
-                            <constraint firstItem="jnf-6c-jPo" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="rkP-cd-dky"/>
-                            <constraint firstItem="Vuy-JU-kEd" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="s5r-lw-Gdr"/>
-                            <constraint firstItem="qQa-Lf-91O" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="yNt-gm-jAn"/>
+                            <constraint firstItem="VyN-Fl-yr8" firstAttribute="leading" secondItem="rXL-ge-OAP" secondAttribute="leading" id="3ev-4m-vi2"/>
+                            <constraint firstItem="qQa-Lf-91O" firstAttribute="top" secondItem="jnf-6c-jPo" secondAttribute="bottom" constant="20" id="BeE-K1-poh"/>
+                            <constraint firstItem="VyN-Fl-yr8" firstAttribute="bottom" secondItem="z3h-SZ-LZc" secondAttribute="top" id="IHr-fL-epW"/>
+                            <constraint firstItem="Vuy-JU-kEd" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="M8B-hL-ZHA"/>
+                            <constraint firstItem="jnf-6c-jPo" firstAttribute="top" secondItem="XYH-wn-9on" secondAttribute="bottom" constant="20" id="P1t-WS-tws"/>
+                            <constraint firstItem="qQa-Lf-91O" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="Yrd-Je-4gj"/>
+                            <constraint firstItem="jnf-6c-jPo" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="Ytu-aK-IUL"/>
+                            <constraint firstItem="Vuy-JU-kEd" firstAttribute="top" secondItem="qQa-Lf-91O" secondAttribute="bottom" constant="20" id="aBr-IW-WJM"/>
+                            <constraint firstItem="qQa-Lf-91O" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="dnM-ZM-Xpi"/>
+                            <constraint firstItem="XYH-wn-9on" firstAttribute="top" secondItem="VyN-Fl-yr8" secondAttribute="bottom" constant="20" id="nzE-os-jXx"/>
+                            <constraint firstItem="XYH-wn-9on" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="tkl-Km-V4e"/>
+                            <constraint firstItem="XYH-wn-9on" firstAttribute="leading" secondItem="z3h-SZ-LZc" secondAttribute="leading" id="vCa-41-bP5"/>
+                            <constraint firstAttribute="trailing" secondItem="VyN-Fl-yr8" secondAttribute="trailing" id="vSt-G2-Vz6"/>
+                            <constraint firstItem="Vuy-JU-kEd" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="xXk-Ng-LXA"/>
+                            <constraint firstItem="jnf-6c-jPo" firstAttribute="trailing" secondItem="z3h-SZ-LZc" secondAttribute="trailing" id="zfI-Gr-fFb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z3h-SZ-LZc"/>
                     </view>
@@ -176,7 +194,7 @@ DanielBeadle.net</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihh-WN-Ey5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224.8" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1224.5" y="115.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hDU-5w-dUR">
