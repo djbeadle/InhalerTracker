@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var feedbackDisplay: UITextField!
     
+    @IBOutlet weak var navbar: UINavigationItem!
     @IBOutlet var mainView: UIView!
     
     private let authorizeHealthKitSection = 2
@@ -53,17 +54,23 @@ class ViewController: UIViewController {
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if darkModeEnabled
         {
+            print("Presenting dark mode")
             mainView.backgroundColor = .black
-            outputDisplay.textColor = .white
-            inhaleTime.setValue(UIColor.white, forKeyPath: "textColor")
+            outputDisplay.textColor = .lightGray
+            inhaleTime.setValue(UIColor.lightGray, forKeyPath: "textColor")
             inhaleTime.setValue(false, forKeyPath: "highlightsToday")
+            
+            self.navigationController?.navigationBar.barTintColor = .darkGray
         }
         else
         {
+            print("Presenting light mode")
             mainView.backgroundColor = .white
             outputDisplay.textColor = .black
             inhaleTime.setValue(UIColor.black, forKeyPath: "textColor")
             inhaleTime.setValue(false, forKeyPath: "highlightsToday")
+            
+            self.navigationController?.navigationBar.barTintColor = .white
         }
     }
     
@@ -74,17 +81,23 @@ class ViewController: UIViewController {
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if darkModeEnabled
         {
+            print("Turning on dark mode!")
             mainView.backgroundColor = .black
-            outputDisplay.textColor = .white
-            inhaleTime.setValue(UIColor.white, forKeyPath: "textColor")
+            outputDisplay.textColor = .lightGray
+            inhaleTime.setValue(UIColor.lightGray, forKeyPath: "textColor")
             inhaleTime.setValue(false, forKeyPath: "highlightsToday")
+            
+            self.navigationController?.navigationBar.barTintColor = .darkGray
         }
         else
         {
+            print("Turning on light mode!")
             mainView.backgroundColor = .white
             outputDisplay.textColor = .black
             inhaleTime.setValue(UIColor.black, forKeyPath: "textColor")
             inhaleTime.setValue(false, forKeyPath: "highlightsToday")
+            
+            self.navigationController?.navigationBar.barTintColor = .white
         }
     }
 

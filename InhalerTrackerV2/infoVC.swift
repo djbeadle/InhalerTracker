@@ -19,6 +19,7 @@ class infoVC: UIViewController{
     @IBOutlet weak var sourceText: UITextView!
     @IBOutlet weak var privacyText: UITextView!
     @IBOutlet weak var darkModeText: UITextField!
+    @IBOutlet weak var navbar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +29,20 @@ class infoVC: UIViewController{
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if(darkModeEnabled)
         {
+            print("Presenting dark mode")
             view.backgroundColor = .black
-            bylineText.textColor = .white
-            iconCreditText.textColor = .white
-            sourceText.textColor = .white
-            privacyText.textColor = .white
-            darkModeText.textColor = .white
+            bylineText.textColor = .lightGray
+            iconCreditText.textColor = .lightGray
+            sourceText.textColor = .lightGray
+            privacyText.textColor = .lightGray
+            darkModeText.textColor = .lightGray
             darkMode.setOn(true, animated: false)
+            
+            self.navigationController?.navigationBar.barTintColor = .darkGray
         }
         else
         {
+            print("Presenting light mode")
             view.backgroundColor = .white
             bylineText.textColor = .black
             iconCreditText.textColor = .black
@@ -45,6 +50,8 @@ class infoVC: UIViewController{
             privacyText.textColor = .black
             darkModeText.textColor = .black
             darkMode.setOn(false, animated: false)
+            
+            self.navigationController?.navigationBar.barTintColor = .white
         }
         
     }
@@ -62,6 +69,7 @@ class infoVC: UIViewController{
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if (darkModeEnabled)
         {
+            print("Switching to light mode")
             defaults.set(false, forKey: "darkMode")
             
             view.backgroundColor = .white
@@ -70,23 +78,24 @@ class infoVC: UIViewController{
             sourceText.textColor = .black
             privacyText.textColor = .black
             darkModeText.textColor = .black
+            
+            self.navigationController?.navigationBar.barTintColor = .white
+
         }
         else
         {
+            print("Switching to dark mode")
             defaults.set(true, forKey: "darkMode")
-            
             view.backgroundColor = .black
-            bylineText.textColor = .white
-            iconCreditText.textColor = .white
-            sourceText.textColor = .white
-            privacyText.textColor = .white
-            darkModeText.textColor = .white
+            bylineText.textColor = .lightGray
+            iconCreditText.textColor = .lightGray
+            sourceText.textColor = .lightGray
+            privacyText.textColor = .lightGray
+            darkModeText.textColor = .lightGray
+            
+            self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         }
-        
-        
         NotificationCenter.default.post(name: Notification.Name("DarkModeChanged"), object: nil)
-
-        
     }
     
 }
