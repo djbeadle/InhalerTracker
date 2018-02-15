@@ -33,7 +33,7 @@
 		C0747EE22026B01A000C69E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0747EE82026B035000C69E3 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		C0747EEB202781FA000C69E3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		C0747EED202781FB000C69E3 /* InhalerTrackerV2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InhalerTrackerV2.entitlements; sourceTree = "<group>"; };
+		C0747EED202781FB000C69E3 /* InhalerTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InhalerTracker.entitlements; sourceTree = "<group>"; };
 		C0BFBA892027BC3700CD8E42 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C0BFBA8A2027C14800CD8E42 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +55,7 @@
 			children = (
 				C0BFBA892027BC3700CD8E42 /* README.md */,
 				C0BFBA8A2027C14800CD8E42 /* ScreenShot.png */,
-				C0747ED52026B01A000C69E3 /* InhalerTrackerV2 */,
+				C0747ED52026B01A000C69E3 /* InhalerTracker */,
 				C0747ED42026B01A000C69E3 /* Products */,
 				C0747EEA202781FA000C69E3 /* Frameworks */,
 			);
@@ -69,13 +69,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0747ED52026B01A000C69E3 /* InhalerTrackerV2 */ = {
+		C0747ED52026B01A000C69E3 /* InhalerTracker */ = {
 			isa = PBXGroup;
 			children = (
 				C0717D5D2034F69800D79705 /* failure.png */,
 				C0717D5C2034F69800D79705 /* success.png */,
 				C054714920315345006C32AE /* infoVC.swift */,
-				C0747EED202781FB000C69E3 /* InhalerTrackerV2.entitlements */,
+				C0747EED202781FB000C69E3 /* InhalerTracker.entitlements */,
 				C0747EE82026B035000C69E3 /* HealthKitSetupAssistant.swift */,
 				C0747ED62026B01A000C69E3 /* AppDelegate.swift */,
 				C0747ED82026B01A000C69E3 /* ViewController.swift */,
@@ -84,7 +84,7 @@
 				C0747EDF2026B01A000C69E3 /* LaunchScreen.storyboard */,
 				C0747EE22026B01A000C69E3 /* Info.plist */,
 			);
-			path = InhalerTrackerV2;
+			path = InhalerTracker;
 			sourceTree = "<group>";
 		};
 		C0747EEA202781FA000C69E3 /* Frameworks */ = {
@@ -136,7 +136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0747ECE2026B01A000C69E3 /* Build configuration list for PBXProject "InhalerTrackerV2" */;
+			buildConfigurationList = C0747ECE2026B01A000C69E3 /* Build configuration list for PBXProject "InhalerTracker" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -315,13 +315,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = InhalerTrackerV2/InhalerTrackerV2.entitlements;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = InhalerTracker/InhalerTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9YE363FNG;
-				INFOPLIST_FILE = InhalerTrackerV2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_FILE = "$(SRCROOT)/InhalerTracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTrackerV2;
+				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -332,13 +333,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = InhalerTrackerV2/InhalerTrackerV2.entitlements;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = InhalerTracker/InhalerTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9YE363FNG;
-				INFOPLIST_FILE = InhalerTrackerV2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_FILE = "$(SRCROOT)/InhalerTracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTrackerV2;
+				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -348,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0747ECE2026B01A000C69E3 /* Build configuration list for PBXProject "InhalerTrackerV2" */ = {
+		C0747ECE2026B01A000C69E3 /* Build configuration list for PBXProject "InhalerTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0747EE32026B01A000C69E3 /* Debug */,
