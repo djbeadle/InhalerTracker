@@ -32,13 +32,13 @@ class ViewController: UIViewController {
             guard authorized else {
                 let baseMessage = "HealthKit Authorization Failed"
                 if let error = error {
-                    print("\(baseMessage). Reason: \(error.localizedDescription)")
+                    // print("\(baseMessage). Reason: \(error.localizedDescription)")
                 } else {
-                    print(baseMessage)
+                    // print(baseMessage)
                 }
                 return
             }
-            print("HealthKit Successfully Authorized.")
+            // print("HealthKit Successfully Authorized.")
         }
     }
     
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if darkModeEnabled
         {
-            print("Presenting dark mode")
+            // print("Presenting dark mode")
             mainView.backgroundColor = .black
             outputDisplay.textColor = .lightGray
             inhaleTime.setValue(UIColor.lightGray, forKeyPath: "textColor")
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         }
         else
         {
-            print("Presenting light mode")
+            // print("Presenting light mode")
             mainView.backgroundColor = .white
             outputDisplay.textColor = .black
             inhaleTime.setValue(UIColor.black, forKeyPath: "textColor")
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if darkModeEnabled
         {
-            print("Turning on dark mode!")
+            // print("Turning on dark mode!")
             mainView.backgroundColor = .black
             outputDisplay.textColor = .lightGray
             inhaleTime.setValue(UIColor.lightGray, forKeyPath: "textColor")
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         }
         else
         {
-            print("Turning on light mode!")
+            // print("Turning on light mode!")
             mainView.backgroundColor = .white
             outputDisplay.textColor = .black
             inhaleTime.setValue(UIColor.black, forKeyPath: "textColor")
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
         // outputDisplay.text = Int(sender.value).description
         puffCount = Int(sender.value)
         outputDisplay.text = puffCount.description
-        print("Puff Count: \(puffCount)")
+        // print("Puff Count: \(puffCount)")
     }
     
     @IBAction func datePickerChanged(_ sender: UIDatePicker)
@@ -138,7 +138,7 @@ class ViewController: UIViewController {
         // Define the data type we're using, make sure they're available on this device
         guard let inhalerUsage = HKObjectType.quantityType(forIdentifier: .inhalerUsage) else
         {
-            print("InhalerUsage type not available on this device.")
+            // print("InhalerUsage type not available on this device.")
             return
         }
         
@@ -146,7 +146,7 @@ class ViewController: UIViewController {
         let dataPoint = HKQuantity(unit: HKUnit(from: "count"), doubleValue: Double(puffCount))
         
         // Log to HealthKit
-        print("Logging the following data to HealthKit: \(puffCount) puffs at \(strDate)")
+        // print("Logging the following data to HealthKit: \(puffCount) puffs at \(strDate)")
         let quantitySample = HKQuantitySample(type: inhalerUsage, quantity: dataPoint, start: inhaleTime.date, end: inhaleTime.date)
         
         let healthStore = HKHealthStore()

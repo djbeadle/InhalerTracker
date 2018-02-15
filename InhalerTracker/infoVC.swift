@@ -30,7 +30,7 @@ class infoVC: UIViewController{
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if(darkModeEnabled)
         {
-            print("Presenting dark mode")
+            // print("Presenting dark mode")
             view.backgroundColor = .black
             bylineText.textColor = .lightGray
             iconCreditText.textColor = .lightGray
@@ -44,7 +44,7 @@ class infoVC: UIViewController{
         }
         else
         {
-            print("Presenting light mode")
+            // print("Presenting light mode")
             view.backgroundColor = .white
             bylineText.textColor = .black
             iconCreditText.textColor = .black
@@ -65,14 +65,14 @@ class infoVC: UIViewController{
     }
     
     @IBAction func changeUIMode(_ sender: UISwitch) {
-        print("Changing UI Mode!")
+        // print("Changing UI Mode!")
         
         // Update the user defaults:
         let defaults = UserDefaults.standard
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
         if (darkModeEnabled)
         {
-            print("Switching to light mode")
+            // print("Switching to light mode")
             defaults.set(false, forKey: "darkMode")
             
             view.backgroundColor = .white
@@ -88,7 +88,7 @@ class infoVC: UIViewController{
         }
         else
         {
-            print("Switching to dark mode")
+            // print("Switching to dark mode")
             defaults.set(true, forKey: "darkMode")
             view.backgroundColor = .black
             bylineText.textColor = .lightGray
