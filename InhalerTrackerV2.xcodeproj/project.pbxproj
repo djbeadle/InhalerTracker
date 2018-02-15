@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C054714A20315345006C32AE /* infoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054714920315345006C32AE /* infoVC.swift */; };
+		C0717D5E2034F69800D79705 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = C0717D5C2034F69800D79705 /* success.png */; };
+		C0717D5F2034F69800D79705 /* failure.png in Resources */ = {isa = PBXBuildFile; fileRef = C0717D5D2034F69800D79705 /* failure.png */; };
 		C0747ED72026B01A000C69E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0747ED62026B01A000C69E3 /* AppDelegate.swift */; };
 		C0747ED92026B01A000C69E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0747ED82026B01A000C69E3 /* ViewController.swift */; };
 		C0747EDC2026B01A000C69E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0747EDA2026B01A000C69E3 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		C054714920315345006C32AE /* infoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoVC.swift; sourceTree = "<group>"; };
+		C0717D5C2034F69800D79705 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
+		C0717D5D2034F69800D79705 /* failure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failure.png; sourceTree = "<group>"; };
 		C0747ED32026B01A000C69E3 /* InhalerTrackerV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InhalerTrackerV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0747ED62026B01A000C69E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0747ED82026B01A000C69E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		C0747ED52026B01A000C69E3 /* InhalerTrackerV2 */ = {
 			isa = PBXGroup;
 			children = (
+				C0717D5D2034F69800D79705 /* failure.png */,
+				C0717D5C2034F69800D79705 /* success.png */,
 				C054714920315345006C32AE /* infoVC.swift */,
 				C0747EED202781FB000C69E3 /* InhalerTrackerV2.entitlements */,
 				C0747EE82026B035000C69E3 /* HealthKitSetupAssistant.swift */,
@@ -155,7 +161,9 @@
 			files = (
 				C0747EE12026B01A000C69E3 /* LaunchScreen.storyboard in Resources */,
 				C0747EDE2026B01A000C69E3 /* Assets.xcassets in Resources */,
+				C0717D5E2034F69800D79705 /* success.png in Resources */,
 				C0BFBA8B2027C14800CD8E42 /* ScreenShot.png in Resources */,
+				C0717D5F2034F69800D79705 /* failure.png in Resources */,
 				C0747EDC2026B01A000C69E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,11 +319,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9YE363FNG;
 				INFOPLIST_FILE = InhalerTrackerV2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTrackerV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -327,11 +336,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9YE363FNG;
 				INFOPLIST_FILE = InhalerTrackerV2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTrackerV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

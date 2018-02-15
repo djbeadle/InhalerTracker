@@ -14,10 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var puffCounter: UIStepper!
     @IBOutlet weak var inhaleTime: UIDatePicker!
     @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var feedbackDisplay: UITextField!
     
+    @IBOutlet weak var outputImage: UIImageView!
     @IBOutlet weak var navbar: UINavigationItem!
     @IBOutlet var mainView: UIView!
+    
+    let successImage = UIImage(named: "success.png")
+    let failureImage = UIImage(named: "failure.png")
     
     private let authorizeHealthKitSection = 2
     var puffCount = 1
@@ -48,7 +51,6 @@ class ViewController: UIViewController {
         // Was dark mode turned on in the infoVIew?
         NotificationCenter.default.addObserver(self, selector: #selector(toggleDarkMode), name: NSNotification.Name("DarkModeChanged"), object: nil)
 
-        
         // Dark mode!
         let defaults = UserDefaults.standard
         let darkModeEnabled = defaults.bool(forKey: "darkMode")
@@ -110,7 +112,7 @@ class ViewController: UIViewController {
     @IBAction func puffCounter(_ sender: UIStepper)
     {
         // clear feedbackDisplay
-        feedbackDisplay.text = ""
+        outputImage.image = nil
         
         // outputDisplay.text = Int(sender.value).description
         puffCount = Int(sender.value)
@@ -121,7 +123,7 @@ class ViewController: UIViewController {
     @IBAction func datePickerChanged(_ sender: UIDatePicker)
     {
         // clear feedbackDisplay
-        feedbackDisplay.text = ""
+        outputImage.image = nil
     }
     
     @IBAction func submitButtonPressed(_ sender: UIButton) {
@@ -154,7 +156,8 @@ class ViewController: UIViewController {
                 print ("Error saving inhaler usage: \(error.localizedDescription)")
                 // Can't update the UI from a completion handler
                 DispatchQueue.main.async {
-                    self.feedbackDisplay.text = "🚫"
+                    self.outputImage.image = UIImage(named: "failure.png")
+                    // self.feedbackDisplay.text = "🚫"
                 }
                 
             } else
@@ -162,7 +165,8 @@ class ViewController: UIViewController {
                 print ("Successfully saved inhaler usage!")
                 // Can't update the UI from a completion handler
                 DispatchQueue.main.async {
-                    self.feedbackDisplay.text = "✅"
+                    self.outputImage.image = UIImage(named: "success.png")
+                    // self.feedbackDisplay.text = "✅"
                 }
             }
         }

@@ -20,6 +20,7 @@ class infoVC: UIViewController{
     @IBOutlet weak var privacyText: UITextView!
     @IBOutlet weak var darkModeText: UITextField!
     @IBOutlet weak var navbar: UINavigationBar!
+    @IBOutlet weak var openIconicText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class infoVC: UIViewController{
             sourceText.textColor = .lightGray
             privacyText.textColor = .lightGray
             darkModeText.textColor = .lightGray
+            openIconicText.textColor = .lightGray
             darkMode.setOn(true, animated: false)
             
             self.navigationController?.navigationBar.barTintColor = .darkGray
@@ -49,6 +51,7 @@ class infoVC: UIViewController{
             sourceText.textColor = .black
             privacyText.textColor = .black
             darkModeText.textColor = .black
+            openIconicText.textColor = .black
             darkMode.setOn(false, animated: false)
             
             self.navigationController?.navigationBar.barTintColor = .white
@@ -78,6 +81,7 @@ class infoVC: UIViewController{
             sourceText.textColor = .black
             privacyText.textColor = .black
             darkModeText.textColor = .black
+            openIconicText.textColor = .black
             
             self.navigationController?.navigationBar.barTintColor = .white
 
@@ -92,6 +96,7 @@ class infoVC: UIViewController{
             sourceText.textColor = .lightGray
             privacyText.textColor = .lightGray
             darkModeText.textColor = .lightGray
+            openIconicText.textColor = .lightGray
             
             self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         }
