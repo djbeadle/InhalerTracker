@@ -198,7 +198,7 @@ DanielBeadle.net</string>
                                     <constraint firstAttribute="width" constant="320" id="UNR-uS-wkc"/>
                                     <constraint firstAttribute="height" constant="100" id="e1u-2P-1TI"/>
                                 </constraints>
-                                <string key="text">The success and error icons come from the Open Iconic set. A copy of the project's MIT license, a copy of which can be found here:
+                                <string key="text">The success and error icons come from the Open Iconic set. A copy of the project's MIT license can be found here:
 https://github.com/iconic/open-iconic/blob/master/ICON-LICENSE</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
