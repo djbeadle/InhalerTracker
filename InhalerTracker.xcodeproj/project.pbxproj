@@ -122,6 +122,7 @@
 				C0747EEA202781FA000C69E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		C0747ED42026B01A000C69E3 /* Products */ = {
 			isa = PBXGroup;
