@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C004E1B72035FCB500EF4F67 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C004E1B62035FCB500EF4F67 /* Info.plist */; };
 		C031434F203A2D9500FF7400 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C031434E203A2D9500FF7400 /* NotificationCenter.framework */; };
 		C0314352203A2D9500FF7400 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0314351203A2D9500FF7400 /* TodayViewController.swift */; };
 		C0314355203A2D9500FF7400 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0314353203A2D9500FF7400 /* MainInterface.storyboard */; };
@@ -181,9 +180,9 @@
 			productReference = C031434D203A2D9500FF7400 /* InhalerTrackerExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		C0747ED22026B01A000C69E3 /* InhalerTrackerV2 */ = {
+		C0747ED22026B01A000C69E3 /* InhalerTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0747EE52026B01A000C69E3 /* Build configuration list for PBXNativeTarget "InhalerTrackerV2" */;
+			buildConfigurationList = C0747EE52026B01A000C69E3 /* Build configuration list for PBXNativeTarget "InhalerTracker" */;
 			buildPhases = (
 				C0747ECF2026B01A000C69E3 /* Sources */,
 				C0747ED02026B01A000C69E3 /* Frameworks */,
@@ -195,7 +194,7 @@
 			dependencies = (
 				C0314358203A2D9500FF7400 /* PBXTargetDependency */,
 			);
-			name = InhalerTrackerV2;
+			name = InhalerTracker;
 			productName = InhalerTrackerV2;
 			productReference = C0747ED32026B01A000C69E3 /* Inhaler Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -238,7 +237,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0747ED22026B01A000C69E3 /* InhalerTrackerV2 */,
+				C0747ED22026B01A000C69E3 /* InhalerTracker */,
 				C031434C203A2D9500FF7400 /* InhalerTrackerExtension */,
 			);
 		};
@@ -265,7 +264,6 @@
 				C0BFBA8B2027C14800CD8E42 /* ScreenShot.png in Resources */,
 				C0717D5F2034F69800D79705 /* failure.png in Resources */,
 				C0747EDC2026B01A000C69E3 /* Main.storyboard in Resources */,
-				C004E1B72035FCB500EF4F67 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0747EE52026B01A000C69E3 /* Build configuration list for PBXNativeTarget "InhalerTrackerV2" */ = {
+		C0747EE52026B01A000C69E3 /* Build configuration list for PBXNativeTarget "InhalerTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0747EE62026B01A000C69E3 /* Debug */,
