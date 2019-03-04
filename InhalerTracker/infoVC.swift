@@ -33,11 +33,8 @@ class infoVC: UIViewController{
             // print("Presenting dark mode")
             view.backgroundColor = .black
             bylineText.textColor = .lightGray
-            iconCreditText.textColor = .lightGray
-            sourceText.textColor = .lightGray
-            privacyText.textColor = .lightGray
+            bylineText.indicatorStyle = .white
             darkModeText.textColor = .lightGray
-            openIconicText.textColor = .lightGray
             darkMode.setOn(true, animated: false)
             
             self.navigationController?.navigationBar.barTintColor = .darkGray
@@ -47,11 +44,8 @@ class infoVC: UIViewController{
             // print("Presenting light mode")
             view.backgroundColor = .white
             bylineText.textColor = .black
-            iconCreditText.textColor = .black
-            sourceText.textColor = .black
-            privacyText.textColor = .black
+            bylineText.indicatorStyle = .black
             darkModeText.textColor = .black
-            openIconicText.textColor = .black
             darkMode.setOn(false, animated: false)
             
             self.navigationController?.navigationBar.barTintColor = .white
@@ -77,11 +71,8 @@ class infoVC: UIViewController{
             
             view.backgroundColor = .white
             bylineText.textColor = .black
-            iconCreditText.textColor = .black
-            sourceText.textColor = .black
-            privacyText.textColor = .black
+            bylineText.indicatorStyle = .white
             darkModeText.textColor = .black
-            openIconicText.textColor = .black
             
             self.navigationController?.navigationBar.barTintColor = .white
 
@@ -92,11 +83,8 @@ class infoVC: UIViewController{
             defaults.set(true, forKey: "darkMode")
             view.backgroundColor = .black
             bylineText.textColor = .lightGray
-            iconCreditText.textColor = .lightGray
-            sourceText.textColor = .lightGray
-            privacyText.textColor = .lightGray
+            bylineText.indicatorStyle = .white
             darkModeText.textColor = .lightGray
-            openIconicText.textColor = .lightGray
             
             self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         }

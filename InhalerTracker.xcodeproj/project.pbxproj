@@ -486,7 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9YE363FNG;
 				INFOPLIST_FILE = "$(SRCROOT)/InhalerTracker/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTracker;
 				PRODUCT_NAME = "Inhaler Tracker";
@@ -505,7 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9YE363FNG;
 				INFOPLIST_FILE = "$(SRCROOT)/InhalerTracker/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.danielbeadle.InhalerTracker;
 				PRODUCT_NAME = "Inhaler Tracker";
